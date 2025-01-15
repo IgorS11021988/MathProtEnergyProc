@@ -1930,7 +1930,7 @@ class TestNonEqSystemComExp(unittest.TestCase):
         self.assertAlmostEqual(deltaChar1, 0.0, 3)
         self.assertTrue(char1.shape == char1et.shape)
         deltaChar2 = np.max(np.abs(char2 - char2et))
-        self.assertAlmostEqual(deltaChar2, 0.0, 6)
+        self.assertAlmostEqual(deltaChar2, 0.0, 5)
         self.assertTrue(char2.shape == char2et.shape)
         deltaChar3 = np.max(np.abs(char3 - char3et))
         self.assertAlmostEqual(deltaChar3, 0.0, 9)

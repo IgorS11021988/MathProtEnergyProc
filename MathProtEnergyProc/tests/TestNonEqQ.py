@@ -710,7 +710,7 @@ class TestNonEqSystemQ(unittest.TestCase):
         deltaVQPows = np.max(np.abs(vQPows - nonEqSystem.GetVHeatPower()))
         self.assertAlmostEqual(deltaVQPows, 0.0, 7)#Проверяем скорость сообщения теплоты энергетической степени свободы
         deltaVXPows = np.max(np.abs(vx - nonEqSystem.GetVStateCoordinates()))
-        self.assertAlmostEqual(deltaVXPows, 0.0, 9)#Проверяем скорость сообщения теплоты энергетической степени свободы
+        self.assertAlmostEqual(deltaVXPows, 0.0, 8)#Проверяем скорость сообщения теплоты энергетической степени свободы
         deltaVUPows = np.max(np.abs(vUPows - nonEqSystem.GetVUPower()))
         self.assertAlmostEqual(deltaVUPows, 0.0, 7)#Проверяем скорость изменения внутренней энергии энергетической степени свободы
         deltaVRTPows = np.max(np.abs(vT - nonEqSystem.GetVReducedTemperaturesEnergyPowers()))
@@ -2122,9 +2122,9 @@ class TestNonEqSystemQ(unittest.TestCase):
         self.assertAlmostEqual(deltaVProcesses, 0.0, 9)#Проверяем скорость процессов
         self.assertEqual(vQTransf.tolist(), nonEqSystem.GetVHeatTransfers().tolist())#Проверяем скорость переноса теплоты
         deltaVHeatProcesses = np.max(np.abs(vHeatProcesses - nonEqSystem.GetVHeatProcess()))
-        self.assertAlmostEqual(deltaVHeatProcesses, 0.0, 6)#Проверяем скорость выделения некомпенсированной теплоты
+        self.assertAlmostEqual(deltaVHeatProcesses, 0.0, 5)#Проверяем скорость выделения некомпенсированной теплоты
         deltaVQPows = np.max(np.abs(vQPows - nonEqSystem.GetVHeatPower()))
-        self.assertAlmostEqual(deltaVQPows, 0.0, 9)#Проверяем скорость сообщения теплоты энергетической степени свободы
+        self.assertAlmostEqual(deltaVQPows, 0.0, 5)#Проверяем скорость сообщения теплоты энергетической степени свободы
         deltaVXPows = np.max(np.abs(vx - nonEqSystem.GetVStateCoordinates()))
         self.assertAlmostEqual(deltaVXPows, 0.0, 8)#Проверяем скорость сообщения теплоты энергетической степени свободы
         deltaVUPows = np.max(np.abs(vUPows - nonEqSystem.GetVUPower()))

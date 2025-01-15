@@ -14,6 +14,8 @@ MathProtEnergyProc.egg-info/top_level.txt
 MathProtEnergyProc/ComputingExperiment/CountDynamics.py
 MathProtEnergyProc/ComputingExperiment/CountDynamicsQ.py
 MathProtEnergyProc/ComputingExperiment/__init__.py
+MathProtEnergyProc/CorrecionModel/KineticMarix.py
+MathProtEnergyProc/CorrecionModel/__init__.py
 MathProtEnergyProc/DynamicProcess/NonEqSystemDyn.py
 MathProtEnergyProc/DynamicProcess/NonEqSystemQDyn.py
 MathProtEnergyProc/DynamicProcess/__init__.py

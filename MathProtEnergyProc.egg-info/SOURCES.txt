@@ -47,6 +47,7 @@ MathProtEnergyProc/tests/TestNonEqDyn.py
 MathProtEnergyProc/tests/TestNonEqDynQ.py
 MathProtEnergyProc/tests/TestNonEqQ.py
 MathProtEnergyProc/tests/TestPosLinearFilter.py
+MathProtEnergyProc/tests/TestReluFilter.py
 MathProtEnergyProc/tests/UnitTestExamples/FunChar1.py
 MathProtEnergyProc/tests/UnitTestExamples/FunChar2.py
 MathProtEnergyProc/tests/UnitTestExamples/FunChar3.py

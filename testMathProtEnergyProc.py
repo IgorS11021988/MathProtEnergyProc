@@ -21,6 +21,11 @@ from MathProtEnergyProc.tests.TestNonEqComExpModel import TestNonEqSystemComExpM
 from MathProtEnergyProc.tests.TestNonEqComExpModelQ import TestNonEqSystemComExpModelQ
 from MathProtEnergyProc.tests.TestNonEqComExpModelLearning import TestNonEqSystemComExpModelLearning
 from MathProtEnergyProc.tests.TestNonEqComExpModelLearningQ import TestNonEqSystemComExpModelLearningQ
+from MathProtEnergyProc.tests.TestPosLinearFilter import TestPosLinearFilter
+from MathProtEnergyProc.tests.TestExpFilter import TestExpFilter
+from MathProtEnergyProc.tests.TestKineticMatrixFromPosSubMatrix import TestKineticMatrixFromPosSubMatrix
+from MathProtEnergyProc.tests.TestKineticMatrixSymAsym import TestKineticMatrixSymAsym
+from MathProtEnergyProc.tests.TestReluFilter import TestReluFilter
 
 #Запустить тестирование
 if __name__ == "__main__":

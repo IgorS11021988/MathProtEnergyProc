@@ -2,6 +2,11 @@ import numpy as np
 from scipy.linalg import block_diag
 
 #Положительность необратимых составляющих
+def ReluFilter(x):
+    ax = np.abs(x)#Модуль аргументов
+    
+    #Обнуление отрицательных аргументов и вывод результата
+    return (x + ax) / 2
 def PosLinearFilter(x, lam=1000, xmin=0, scy=1):#Линейный в положительной области фильтр
     #Рассчитываем составляющие
     ax = np.abs(x)#Модуль аргументов

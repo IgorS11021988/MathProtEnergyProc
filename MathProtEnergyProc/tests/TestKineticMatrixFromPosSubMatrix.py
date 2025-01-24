@@ -1,6 +1,6 @@
 import numpy as np
 
-from MathProtEnergyProc.CorrecionModel import KineticMatrixFromPosSubMatrix
+from MathProtEnergyProc.CorrectionModel import KineticMatrixFromPosSubMatrix
 
 import unittest
 

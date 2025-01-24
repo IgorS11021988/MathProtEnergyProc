@@ -1,6 +1,6 @@
 import numpy as np
 
-from MathProtEnergyProc.CorrecionModel import PosLinearFilter
+from MathProtEnergyProc.CorrectionModel import PosLinearFilter
 
 from MathProtEnergyProc.tests.UnitTestExamples.fFilters import fPosLinearFilter
 

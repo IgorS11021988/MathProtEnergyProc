@@ -19,7 +19,7 @@ class TestNonEqSystemQ(unittest.TestCase):
         pass
     
     #Модульные тесты
-    def testNonEq1(self):
+    def testNonEqQ1(self):
         #Исходные данные
         stateCoordinates = np.array([10, 20, 55, 75, 111, 213, 39, 45, 93, 81])#Координаты состояния
         reducedTemp = np.array([350, 423])#Приведенные температуры энергетических степеней свободы
@@ -251,7 +251,7 @@ class TestNonEqSystemQ(unittest.TestCase):
         self.assertAlmostEqual(deltaVUPows, 0.0, 7)#Проверяем скорость изменения внутренней энергии энергетической степени свободы
         deltaVRTPows = np.max(np.abs(vT - nonEqSystem.GetVReducedTemperaturesEnergyPowers()))
         self.assertAlmostEqual(deltaVRTPows, 0.0, 6)#Проверяем скорость изменения внутренней энергии энергетической степени свободы
-    def testNonEq2(self):
+    def testNonEqQ2(self):
         #Исходные данные
         stateCoordinates = np.array([14, 45, 57, 90, 141, 183, 43, 41, 85, 79])#Координаты состояния
         reducedTemp = np.array([320, 723])#Приведенные температуры энергетических степеней свободы
@@ -483,7 +483,7 @@ class TestNonEqSystemQ(unittest.TestCase):
         self.assertAlmostEqual(deltaVUPows, 0.0, 6)#Проверяем скорость изменения внутренней энергии энергетической степени свободы
         deltaVRTPows = np.max(np.abs(vT - nonEqSystem.GetVReducedTemperaturesEnergyPowers()))
         self.assertAlmostEqual(deltaVRTPows, 0.0, 5)#Проверяем скорость изменения внутренней энергии энергетической степени свободы
-    def testNonEq3(self):
+    def testNonEqQ3(self):
         #Исходные данные
         stateCoordinates = np.array([34, 14, 57, 81, 441, 18, 39, 43, 82, 73])#Координаты состояния
         reducedTemp = np.array([320, 723])#Приведенные температуры энергетических степеней свободы
@@ -715,7 +715,7 @@ class TestNonEqSystemQ(unittest.TestCase):
         self.assertAlmostEqual(deltaVUPows, 0.0, 7)#Проверяем скорость изменения внутренней энергии энергетической степени свободы
         deltaVRTPows = np.max(np.abs(vT - nonEqSystem.GetVReducedTemperaturesEnergyPowers()))
         self.assertAlmostEqual(deltaVRTPows, 0.0, 5)#Проверяем скорость изменения внутренней энергии энергетической степени свободы
-    def testNonEq4(self):
+    def testNonEqQ4(self):
         #Исходные данные
         stateCoordinates = np.array([10, 20, 55, 75, 111, 213, 39, 45, 93, 81, 80, 64])#Координаты состояния
         reducedTemp = np.array([350, 423])#Приведенные температуры энергетических степеней свободы
@@ -1009,7 +1009,7 @@ class TestNonEqSystemQ(unittest.TestCase):
         self.assertAlmostEqual(deltaVUPows, 0.0, 6)#Проверяем скорость изменения внутренней энергии энергетической степени свободы
         deltaVRTPows = np.max(np.abs(vT - nonEqSystem.GetVReducedTemperaturesEnergyPowers()))
         self.assertAlmostEqual(deltaVRTPows, 0.0, 5)#Проверяем скорость изменения внутренней энергии энергетической степени свободы
-    def testNonEq5(self):
+    def testNonEqQ5(self):
         #Исходные данные
         stateCoordinates = np.array([17, 19, 49, 75, 121, 233, 36, 42, 94, 86, 61, 68])#Координаты состояния
         reducedTemp = np.array([347, 613])#Приведенные температуры энергетических степеней свободы
@@ -1303,7 +1303,7 @@ class TestNonEqSystemQ(unittest.TestCase):
         self.assertAlmostEqual(deltaVUPows, 0.0, 4)#Проверяем скорость изменения внутренней энергии энергетической степени свободы
         deltaVRTPows = np.max(np.abs(vT - nonEqSystem.GetVReducedTemperaturesEnergyPowers()))
         self.assertAlmostEqual(deltaVRTPows, 0.0, 3)#Проверяем скорость изменения внутренней энергии энергетической степенисвободы
-    def testNonEq6(self):
+    def testNonEqQ6(self):
         #Исходные данные
         stateCoordinates = np.array([10, 20, 56, 75, 111, 223, 39, 45, 93, 81, 80, 64])#Координаты состояния
         reducedTemp = np.array([250, 323])#Приведенные температуры энергетических степеней свободы
@@ -1597,7 +1597,7 @@ class TestNonEqSystemQ(unittest.TestCase):
         self.assertAlmostEqual(deltaVUPows, 0.0, 6)#Проверяем скорость изменения внутренней энергии энергетической степени свободы
         deltaVRTPows = np.max(np.abs(vT - nonEqSystem.GetVReducedTemperaturesEnergyPowers()))
         self.assertAlmostEqual(deltaVRTPows, 0.0, 5)#Проверяем скорость изменения внутренней энергии энергетической степени
-    def testNonEq7(self):
+    def testNonEqQ7(self):
         #Исходные данные
         stateCoordinates = np.array([10, 20, 55, 75, 111, 213])#Координаты состояния
         reducedTemp = np.array([350])#Приведенные температуры энергетических степеней свободы
@@ -1775,7 +1775,7 @@ class TestNonEqSystemQ(unittest.TestCase):
         self.assertAlmostEqual(deltaVUPows, 0.0, 5)#Проверяем скорость изменения внутренней энергии энергетической степени свободы
         deltaVRTPows = np.max(np.abs(vT - nonEqSystem.GetVReducedTemperaturesEnergyPowers()))
         self.assertAlmostEqual(deltaVRTPows, 0.0, 5)#Проверяем скорость изменения внутренней энергии энергетической степени свободы         
-    def testNonEq8(self):
+    def testNonEqQ8(self):
         #Исходные данные
         stateCoordinates = np.array([13, 26, 52, 73, 131, 223])#Координаты состояния
         reducedTemp = np.array([350])#Приведенные температуры энергетических степеней свободы
@@ -1953,7 +1953,7 @@ class TestNonEqSystemQ(unittest.TestCase):
         self.assertAlmostEqual(deltaVUPows, 0.0, 6)#Проверяем скорость изменения внутренней энергии энергетической степени свободы
         deltaVRTPows = np.max(np.abs(vT - nonEqSystem.GetVReducedTemperaturesEnergyPowers()))
         self.assertAlmostEqual(deltaVRTPows, 0.0, 5)#Проверяем скорость изменения внутренней энергии энергетической степени свободы         
-    def testNonEq9(self):
+    def testNonEqQ9(self):
         #Исходные данные
         stateCoordinates = np.array([17, 22, 56, 76, 136, 228])#Координаты состояния
         reducedTemp = np.array([350])#Приведенные температуры энергетических степеней свободы

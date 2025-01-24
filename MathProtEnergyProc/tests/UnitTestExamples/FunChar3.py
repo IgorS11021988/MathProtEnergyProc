@@ -9,5 +9,5 @@ def FunChar3(t,#Моменты времени
     Char3 = 0.27*stateCoordinates[:,3]**2 + 0.963*stateCoordinates[:,4]    + 6.21*stateCoordinates[:,2]
     
     #Выводим результат
-    return (t,Char1,Char2,Char3)
+    return (t,Char1.reshape(-1,1),Char2.reshape(-1,1),Char3.reshape(-1,1))
     

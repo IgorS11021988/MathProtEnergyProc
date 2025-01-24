@@ -13,6 +13,8 @@ from MathProtEnergyProc.tests.TestIndexedNames import TestIndexedNames
 from MathProtEnergyProc.tests.TestAllIndexedNames import TestAllIndexedNames
 from MathProtEnergyProc.tests.TestNonEq import TestNonEqSystem
 from MathProtEnergyProc.tests.TestNonEqQ import TestNonEqSystemQ
+from MathProtEnergyProc.tests.TestNonEqBase import TestNonEqSystemBase
+from MathProtEnergyProc.tests.TestNonEqQBase import TestNonEqSystemQBase
 from MathProtEnergyProc.tests.TestNonEqDyn import TestNonEqSystemDyn
 from MathProtEnergyProc.tests.TestNonEqDynQ import TestNonEqSystemDynQ
 from MathProtEnergyProc.tests.TestNonEqComExp import TestNonEqSystemComExp
@@ -24,8 +26,15 @@ from MathProtEnergyProc.tests.TestNonEqComExpModelLearningQ import TestNonEqSyst
 from MathProtEnergyProc.tests.TestPosLinearFilter import TestPosLinearFilter
 from MathProtEnergyProc.tests.TestExpFilter import TestExpFilter
 from MathProtEnergyProc.tests.TestKineticMatrixFromPosSubMatrix import TestKineticMatrixFromPosSubMatrix
-from MathProtEnergyProc.tests.TestKineticMatrixSymAsym import TestKineticMatrixSymAsym
+from MathProtEnergyProc.tests.TestKineticMatrixFromSymAsym import TestKineticMatrixFromSymAsym
 from MathProtEnergyProc.tests.TestReluFilter import TestReluFilter
+from MathProtEnergyProc.tests.TestSymRevMatrix import TestSymRevMatrix
+from MathProtEnergyProc.tests.TestSymAndAsymRevMatrix import TestSymAndAsymRevMatrix
+from MathProtEnergyProc.tests.TestKineticMatrixFromFacStreamEkvAff import TestKineticMatrixFromFacStreamEkvAff
+from MathProtEnergyProc.tests.TestKineticMarix import TestKineticMarix
+from MathProtEnergyProc.tests.TestKineticMarixQ import TestKineticMarixQ
+from MathProtEnergyProc.tests.TestBetaProcess import TestBetaProcess
+from MathProtEnergyProc.tests.TestBetaMatrix import TestBetaMatrix
 
 #Запустить тестирование
 if __name__ == "__main__":

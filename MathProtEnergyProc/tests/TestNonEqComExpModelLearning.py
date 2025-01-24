@@ -795,7 +795,7 @@ class TestNonEqSystemComExpModelLearning(unittest.TestCase):
         
         #Проверяем рассчитанные динамики выходных характеристик системы
         deltaChar1 = np.max(np.abs(funSysPar.Par[0] - char2et))
-        self.assertAlmostEqual(deltaChar1, 0.0, 6)
+        self.assertAlmostEqual(deltaChar1, 0.0, 9)
         deltaChar2 = np.max(np.abs(funSysPar.Par[1] - stateCoordinates[0]))
         self.assertAlmostEqual(deltaChar2, 0.0, 9)
         deltaChar3 = np.max(np.abs(funSysPar.Par[2] - systemParameters[0]))

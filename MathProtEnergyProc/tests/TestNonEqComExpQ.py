@@ -386,10 +386,10 @@ class TestNonEqSystemComExpQ(unittest.TestCase):
         
         #Проверяем рассчитанные динамики выходных характеристик системы
         deltaChar1 = np.max(np.abs(char1 - char1et))
-        self.assertAlmostEqual(deltaChar1, 0.0, 7)
+        self.assertAlmostEqual(deltaChar1, 0.0, 9)
         self.assertTrue(char1.shape == char1et.shape)
         deltaChar2 = np.max(np.abs(char2 - char2et))
-        self.assertAlmostEqual(deltaChar2, 0.0, 4)
+        self.assertAlmostEqual(deltaChar2, 0.0, 8)
         self.assertTrue(char2.shape == char2et.shape)
         self.assertTrue(np.all(ind == indsEt))
         self.assertTrue(ind.shape == indsEt.shape)
@@ -746,10 +746,10 @@ class TestNonEqSystemComExpQ(unittest.TestCase):
         
         #Проверяем рассчитанные динамики выходных характеристик системы
         deltaChar1 = np.max(np.abs(char1 - char1et))
-        self.assertAlmostEqual(deltaChar1, 0.0, 7)
+        self.assertAlmostEqual(deltaChar1, 0.0, 9)
         self.assertTrue(char1.shape == char1et.shape)
         deltaChar2 = np.max(np.abs(char2 - char2et))
-        self.assertAlmostEqual(deltaChar2, 0.0, 4)
+        self.assertAlmostEqual(deltaChar2, 0.0, 8)
         self.assertTrue(char2.shape == char2et.shape)
     def testNonEqDyn3(self):
         #Исходные данные
@@ -1110,10 +1110,10 @@ class TestNonEqSystemComExpQ(unittest.TestCase):
         
         #Проверяем рассчитанные динамики выходных характеристик системы
         deltaChar1 = np.max(np.abs(char1 - char1et))
-        self.assertAlmostEqual(deltaChar1, 0.0, 7)
+        self.assertAlmostEqual(deltaChar1, 0.0, 9)
         self.assertTrue(char1.shape == char1et.shape)
         deltaChar2 = np.max(np.abs(char2 - char2et))
-        self.assertAlmostEqual(deltaChar2, 0.0, 4)
+        self.assertAlmostEqual(deltaChar2, 0.0, 9)
         self.assertTrue(char2.shape == char2et.shape)
     def testNonEqDyn4(self):
         #Исходные данные
@@ -1580,10 +1580,10 @@ class TestNonEqSystemComExpQ(unittest.TestCase):
         
         #Проверяем рассчитанные динамики выходных характеристик системы
         deltaChar1 = np.max(np.abs(char1 - char1et))
-        self.assertAlmostEqual(deltaChar1, 0.0, 2)
+        self.assertAlmostEqual(deltaChar1, 0.0, 6)
         self.assertTrue(char1.shape == char1et.shape)
         deltaChar2 = np.max(np.abs(char2 - char2et))
-        self.assertAlmostEqual(deltaChar2, 0.0, -2)
+        self.assertAlmostEqual(deltaChar2, 0.0, 3)
         self.assertTrue(char2.shape == char2et.shape)
         deltaChar3 = np.max(np.abs(char3 - char3et))
         self.assertAlmostEqual(deltaChar3, 0.0, 9)
@@ -2044,10 +2044,10 @@ class TestNonEqSystemComExpQ(unittest.TestCase):
         
         #Проверяем рассчитанные динамики выходных характеристик системы
         deltaChar1 = np.max(np.abs(char1 - char1et))
-        self.assertAlmostEqual(deltaChar1, 0.0, 2)
+        self.assertAlmostEqual(deltaChar1, 0.0, 6)
         self.assertTrue(char1.shape == char1et.shape)
         deltaChar2 = np.max(np.abs(char2 - char2et))
-        self.assertAlmostEqual(deltaChar2, 0.0, -1)
+        self.assertAlmostEqual(deltaChar2, 0.0, 4)
         self.assertTrue(char2.shape == char2et.shape)
         deltaChar3 = np.max(np.abs(char3 - char3et))
         self.assertAlmostEqual(deltaChar3, 0.0, 9)
@@ -2496,10 +2496,10 @@ class TestNonEqSystemComExpQ(unittest.TestCase):
         
         #Проверяем рассчитанные динамики выходных характеристик системы
         deltaChar1 = np.max(np.abs(char1 - char1et))
-        self.assertAlmostEqual(deltaChar1, 0.0, 2)
+        self.assertAlmostEqual(deltaChar1, 0.0, 9)
         self.assertTrue(char1.shape == char1et.shape)
         deltaChar2 = np.max(np.abs(char2 - char2et))
-        self.assertAlmostEqual(deltaChar2, 0.0, -1)
+        self.assertAlmostEqual(deltaChar2, 0.0, 7)
         self.assertTrue(char2.shape == char2et.shape)
         deltaChar3 = np.max(np.abs(char3 - char3et))
         self.assertAlmostEqual(deltaChar3, 0.0, 9)
@@ -2779,13 +2779,13 @@ class TestNonEqSystemComExpQ(unittest.TestCase):
         
         #Проверяем рассчитанные динамики выходных характеристик системы
         deltaChar1 = np.max(np.abs(char1 - char1et))
-        self.assertAlmostEqual(deltaChar1, 0.0, -1)
+        self.assertAlmostEqual(deltaChar1, 0.0, 3)
         self.assertTrue(char1.shape == char1et.shape)
         deltaChar2 = np.max(np.abs(char2 - char2et))
-        self.assertAlmostEqual(deltaChar2, 0.0, 2)
+        self.assertAlmostEqual(deltaChar2, 0.0, 6)
         self.assertTrue(char2.shape == char2et.shape)
         deltaChar3 = np.max(np.abs(char3 - char3et))
-        self.assertAlmostEqual(deltaChar3, 0.0, 8)
+        self.assertAlmostEqual(deltaChar3, 0.0, 9)
         self.assertTrue(char3.shape == char3et.shape)
     def testNonEqDyn8(self):
         #Исходные данные
@@ -3065,13 +3065,13 @@ class TestNonEqSystemComExpQ(unittest.TestCase):
         
         #Проверяем рассчитанные динамики выходных характеристик системы
         deltaChar1 = np.max(np.abs(char1 - char1et))
-        self.assertAlmostEqual(deltaChar1, 0.0, -1)
+        self.assertAlmostEqual(deltaChar1, 0.0, 3)
         self.assertTrue(char1.shape == char1et.shape)
         deltaChar2 = np.max(np.abs(char2 - char2et))
-        self.assertAlmostEqual(deltaChar2, 0.0, 1)
+        self.assertAlmostEqual(deltaChar2, 0.0, 5)
         self.assertTrue(char2.shape == char2et.shape)
         deltaChar3 = np.max(np.abs(char3 - char3et))
-        self.assertAlmostEqual(deltaChar3, 0.0, 8)
+        self.assertAlmostEqual(deltaChar3, 0.0, 9)
         self.assertTrue(char3.shape == char3et.shape)
     def testNonEqDyn9(self):
         #Исходные данные
@@ -3329,10 +3329,10 @@ class TestNonEqSystemComExpQ(unittest.TestCase):
         
         #Проверяем рассчитанные динамики выходных характеристик системы
         deltaChar1 = np.max(np.abs(char1 - char1et))
-        self.assertAlmostEqual(deltaChar1, 0.0, 0)
+        self.assertAlmostEqual(deltaChar1, 0.0, 5)
         self.assertTrue(char1.shape == char1et.shape)
         deltaChar2 = np.max(np.abs(char2 - char2et))
-        self.assertAlmostEqual(deltaChar2, 0.0, 2)
+        self.assertAlmostEqual(deltaChar2, 0.0, 8)
         self.assertTrue(char2.shape == char2et.shape)
         deltaChar3 = np.max(np.abs(char3 - char3et))
         self.assertAlmostEqual(deltaChar3, 0.0, 9)

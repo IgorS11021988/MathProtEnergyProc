@@ -1,3 +1,5 @@
+from MathProtEnergyProc.NonEqProcess.NonEqSystemBase import NonEqSystemBase
+from MathProtEnergyProc.NonEqProcess.NonEqSystemQBase import NonEqSystemQBase
 from MathProtEnergyProc.NonEqProcess.NonEqSystem import NonEqSystem
 from MathProtEnergyProc.NonEqProcess.NonEqSystemQ import NonEqSystemQ
 from MathProtEnergyProc.DynamicProcess.NonEqSystemDyn import NonEqSystemDyn, Model

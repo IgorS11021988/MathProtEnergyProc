@@ -1,6 +1,6 @@
 import numpy as np
 
-from MathProtEnergyProc.CorrecionModel import ExpFilter
+from MathProtEnergyProc.CorrectionModel import ExpFilter
 
 from MathProtEnergyProc.tests.UnitTestExamples.fFilters import fExpFilter
 

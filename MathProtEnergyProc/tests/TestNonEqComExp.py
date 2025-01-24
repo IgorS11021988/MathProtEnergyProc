@@ -1927,10 +1927,10 @@ class TestNonEqSystemComExp(unittest.TestCase):
         
         #Проверяем рассчитанные динамики выходных характеристик системы
         deltaChar1 = np.max(np.abs(char1 - char1et))
-        self.assertAlmostEqual(deltaChar1, 0.0, 3)
+        self.assertAlmostEqual(deltaChar1, 0.0, 7)
         self.assertTrue(char1.shape == char1et.shape)
         deltaChar2 = np.max(np.abs(char2 - char2et))
-        self.assertAlmostEqual(deltaChar2, 0.0, 5)
+        self.assertAlmostEqual(deltaChar2, 0.0, 9)
         self.assertTrue(char2.shape == char2et.shape)
         deltaChar3 = np.max(np.abs(char3 - char3et))
         self.assertAlmostEqual(deltaChar3, 0.0, 9)
@@ -2131,10 +2131,10 @@ class TestNonEqSystemComExp(unittest.TestCase):
         
         #Проверяем рассчитанные динамики выходных характеристик системы
         deltaChar1 = np.max(np.abs(char1 - char1et))
-        self.assertAlmostEqual(deltaChar1, 0.0, 3)
+        self.assertAlmostEqual(deltaChar1, 0.0, 9)
         self.assertTrue(char1.shape == char1et.shape)
         deltaChar2 = np.max(np.abs(char2 - char2et))
-        self.assertAlmostEqual(deltaChar2, 0.0, 6)
+        self.assertAlmostEqual(deltaChar2, 0.0, 9)
         self.assertTrue(char2.shape == char2et.shape)
         deltaChar3 = np.max(np.abs(char3 - char3et))
         self.assertAlmostEqual(deltaChar3, 0.0, 9)
@@ -2313,10 +2313,10 @@ class TestNonEqSystemComExp(unittest.TestCase):
         
         #Проверяем рассчитанные динамики выходных характеристик системы
         deltaChar1 = np.max(np.abs(char1 - char1et))
-        self.assertAlmostEqual(deltaChar1, 0.0, 3)
+        self.assertAlmostEqual(deltaChar1, 0.0, 9)
         self.assertTrue(char1.shape == char1et.shape)
         deltaChar2 = np.max(np.abs(char2 - char2et))
-        self.assertAlmostEqual(deltaChar2, 0.0, 6)
+        self.assertAlmostEqual(deltaChar2, 0.0, 9)
         self.assertTrue(char2.shape == char2et.shape)
         deltaChar3 = np.max(np.abs(char3 - char3et))
         self.assertAlmostEqual(deltaChar3, 0.0, 9)

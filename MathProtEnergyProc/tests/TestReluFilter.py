@@ -1,6 +1,6 @@
 import numpy as np
 
-from MathProtEnergyProc.CorrecionModel import ReluFilter
+from MathProtEnergyProc.CorrectionModel import ReluFilter
 
 import unittest
 

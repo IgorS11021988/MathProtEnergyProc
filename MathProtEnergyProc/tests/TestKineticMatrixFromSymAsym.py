@@ -1,11 +1,11 @@
 import numpy as np
 
-from MathProtEnergyProc.CorrecionModel import KineticMatrixSymAsym
+from MathProtEnergyProc.CorrectionModel import KineticMatrixFromSymAsym
 
 import unittest
 
 #Модульные тесты
-class TestKineticMatrixSymAsym(unittest.TestCase):
+class TestKineticMatrixFromSymAsym(unittest.TestCase):
     def setUp(self):
         #Выполнить настройку тестов (если необходимо)
         pass
@@ -15,7 +15,7 @@ class TestKineticMatrixSymAsym(unittest.TestCase):
         pass
     
     #Модульные тесты
-    def testKineticMatrixSymAsym1(self):
+    def testKineticMatrixFromSymAsym1(self):
         #Исходные данные
         posSubMatrixes = [2.1, 3.3, 6.3]#Составляющие положительно определенные матрицы
         subMatrixBalance1 = np.array([[1.1], [-2.3]], dtype=np.double)
@@ -38,15 +38,15 @@ class TestKineticMatrixSymAsym(unittest.TestCase):
         etKineticMatrix = np.dot(np.dot(etSubMatrixBalance,etPosSubMatrix),etSubMatrixBalance.transpose()) + etAsymKineticMatrix
         
         #Вызываем функцию
-        KineticMatrix = KineticMatrixSymAsym(posSubMatrixes,#Положительные определенные составляющие атрицы
-                                             subMatrixesBalance,#Податрицы баланса
-                                             asymKineticMatrix#Антисимметричная составляющая
-                                             )
+        KineticMatrix = KineticMatrixFromSymAsym(posSubMatrixes,#Положительные определенные составляющие атрицы
+                                                 subMatrixesBalance,#Податрицы баланса
+                                                 asymKineticMatrix#Антисимметричная составляющая
+                                                 )
         
         #Проверяем значения
         err = np.max(np.abs(KineticMatrix - etKineticMatrix))
         self.assertAlmostEqual(err, 0.0, 9)
-    def testKineticMatrixSymAsym2(self):
+    def testKineticMatrixFromSymAsym2(self):
         #Исходные данные
         posSubMatrix1 = np.array([[2.5, -0.3],
                                   [0.3,  6.3]], dtype=np.double)
@@ -86,15 +86,15 @@ class TestKineticMatrixSymAsym(unittest.TestCase):
         etKineticMatrix = np.dot(np.dot(etSubMatrixBalance,etPosSubMatrix),etSubMatrixBalance.transpose()) + etAsymKineticMatrix
         
         #Вызываем функцию
-        KineticMatrix = KineticMatrixSymAsym(posSubMatrixes,#Положительные определенные составляющие атрицы
-                                             subMatrixesBalance,#Податрицы баланса
-                                             asymKineticMatrix#Антисимметричная составляющая
-                                             )
+        KineticMatrix = KineticMatrixFromSymAsym(posSubMatrixes,#Положительные определенные составляющие атрицы
+                                                 subMatrixesBalance,#Податрицы баланса
+                                                 asymKineticMatrix#Антисимметричная составляющая
+                                                 )
         
         #Проверяем значения
         err = np.max(np.abs(KineticMatrix - etKineticMatrix))
         self.assertAlmostEqual(err, 0.0, 9)
-    def testKineticMatrixSymAsym3(self):
+    def testKineticMatrixFromSymAsym3(self):
         #Исходные данныеданные
         posSubMatrix1 = np.array([[2.5, 0.45],
                                   [0.3,  6.3]], dtype=np.double)
@@ -132,10 +132,10 @@ class TestKineticMatrixSymAsym(unittest.TestCase):
         etKineticMatrix = np.dot(np.dot(etSubMatrixBalance,etPosSubMatrix),etSubMatrixBalance.transpose()) + etAsymKineticMatrix
         
         #Вызываем функцию
-        KineticMatrix = KineticMatrixSymAsym(posSubMatrixes,#Положительные определенные составляющие атрицы
-                                             subMatrixesBalance,#Податрицы баланса
-                                             asymKineticMatrix#Антисимметричная составляющая
-                                             )
+        KineticMatrix = KineticMatrixFromSymAsym(posSubMatrixes,#Положительные определенные составляющие атрицы
+                                                 subMatrixesBalance,#Податрицы баланса
+                                                 asymKineticMatrix#Антисимметричная составляющая
+                                                 )
         
         #Проверяем значения
         err = np.max(np.abs(KineticMatrix - etKineticMatrix))

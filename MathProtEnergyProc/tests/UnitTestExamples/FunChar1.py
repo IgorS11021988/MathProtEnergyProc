@@ -8,5 +8,5 @@ def FunChar1(t,#Моменты времени
     Char2 = 0.21*stateCoordinates[:,2] + 0.99*stateCoordinates[:,1] + 3.27*stateCoordinates[:,5]
     
     #Выводим результат
-    return (t,Char1,Char2)
+    return (t,Char1.reshape(-1,1),Char2.reshape(-1,1))
     

@@ -13,5 +13,5 @@ def FunCharQ1(t,#Моменты времени
     Char2 += 0.51*reducedTemp[:,1] ** 3
     
     #Выводим результат
-    return (t,Char1,Char2)
+    return (t,Char1.reshape(-1,1),Char2.reshape(-1,1))
     

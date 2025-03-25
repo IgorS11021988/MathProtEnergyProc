@@ -61,7 +61,7 @@ def funKineticMatrixQIndexes(varKineticPCPCNames,#Имена сопряженн�
             )
 
 #Класс физико-химических систем
-class NonEqSystemQBase(object):
+class NonEqSystemQBase:
     __Tbase = 293;#К
     
     #Конструктор класса
@@ -508,13 +508,13 @@ class NonEqSystemQBase(object):
                                   energyPowerName,#Имя энергетической степени свободы
                                   stateCoordinateName#Имя координаты состояния
                                   ):
-        #Получаем индексыиндексы
+        #Получаем индексы
         energyPowerInd = indf.GetIndex(self.__EnergyPowersNames,
                                        energyPowerName)#Индекс энергетической степени свободы
         stateCoordinateInd = indf.GetIndex(self.__StateCoordinatesNames,
                                            stateCoordinateName)#Индекс координаты состояния
         
-        #Задаем элемент
+        #Выводим элемент
         return self.__PotentialsInter[energyPowerInd,stateCoordinateInd]
             
     #Получение массива потенциалов взаимодействия энергетических степеней свободы
@@ -719,7 +719,8 @@ class NonEqSystemQBase(object):
                                                 processCoordinateAffName)#Индекс термодинамической силы, сопряженной координате процесса
         
         #Выводим элемент
-        return self.__KineticMatrixHeatHeat[processCoordinateInd,processCoordinateAffInd]
+        return self.__KineticMatrixHeatHeat[processCoordinateInd,
+                                            processCoordinateAffInd]
             
     #Получение блока постоянных коэффициентов главного блока кинетической матрицы по перенесенным теплотам
     def GetKineticMatrixHeatHeat(self):
@@ -823,10 +824,12 @@ class NonEqSystemQBase(object):
         self.__TEnergyPowers[self.__EnergyPowersVarTemperatureIndexes] = energyPowerTemperatures
          
         #Задаем переменные потенциалы взаимодействия
-        self.__PotentialsInter[self.__EnergyPowersVarPotentialsInterIndexes,self.__StateCoordinatesVarPotentialsInterIndexes] = potentialInter
+        self.__PotentialsInter[self.__EnergyPowersVarPotentialsInterIndexes,
+                               self.__StateCoordinatesVarPotentialsInterIndexes] = potentialInter
                  
         #Задаем переменные потенциалы взаимодействия между энергетическими степенями свободы
-        self.__PotentialsInterBet[self.__EnergyPowersVarPotentialsInterBetIndexes,self.__StateCoordinatesVarPotentialsInterBetIndexes] = potentialInterBet
+        self.__PotentialsInterBet[self.__EnergyPowersVarPotentialsInterBetIndexes,
+                                  self.__StateCoordinatesVarPotentialsInterBetIndexes] = potentialInterBet
          
         #Задаем переменные потенциалы взаимодействия
         self.__Beta[self.__ProcessCoordinatesVarBetaIndexes,self.__EnergyPowersVarBetaIndexes] = beta

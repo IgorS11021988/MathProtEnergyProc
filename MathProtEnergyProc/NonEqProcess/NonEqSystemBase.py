@@ -19,7 +19,7 @@ def funKineticMatrixIndexes(varKineticNames,#Имена сопряженност
             ProcessCoordinatesVarKineticAffIndexes)
 
 #Класс физико-химических систем
-class NonEqSystemBase(object):
+class NonEqSystemBase:
     #Конструктор класса
     def __init__(self,
                  stateCoordinatesNames,#Имена координат состояния

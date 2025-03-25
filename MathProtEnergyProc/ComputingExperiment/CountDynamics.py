@@ -3,7 +3,7 @@ import numpy as np
 from MathProtEnergyProc.RepeatLastRowsMatrix import RepeatLastRowsMatrix
 
 #Класс расчета динамик
-class CountDynamics(object):
+class CountDynamics:
     #Инициализатор класса
     def __init__(self,
                  nonEqSystemDyn,#Класс динамики неравновесной системы

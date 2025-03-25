@@ -6,7 +6,7 @@ import MathProtEnergyProc.IndexFunctions as indf
 from MathProtEnergyProc.NonEqProcess.NonEqSystemQBase import NonEqSystemQBase
 
 #Класс физико-химических систем
-class NonEqSystemQ(object):
+class NonEqSystemQ:
     #Конструктор класса
     def __init__(self,
                  stateCoordinatesNames,#Имена координат состояния

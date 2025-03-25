@@ -1,5 +1,3 @@
-from MathProtEnergyProc.CorrectionModel.KineticMatrix.KineticMatrixBase import *
-from MathProtEnergyProc.CorrectionModel.KineticMatrix.KineticMatrix import KineticMatrix
-from MathProtEnergyProc.CorrectionModel.KineticMatrix.KineticMatrixQ import KineticMatrixQ
-from MathProtEnergyProc.CorrectionModel.PositiveValuesFilters import *
-from MathProtEnergyProc.CorrectionModel.BetaMatrix import BetaProcess, BetaMatrix
+from .KineticMatrix import *
+from .PositiveValuesFilters import *
+from .BetaMatrix import BetaProcess, BetaMatrix

@@ -1,6 +1,6 @@
 import numpy as np
 
-from MathProtEnergyProc.CorrectionModel import BetaProcess, BetaMatrix
+from MathProtEnergyProc.CorrectionModel import BetaMatrix
 
 import unittest
 

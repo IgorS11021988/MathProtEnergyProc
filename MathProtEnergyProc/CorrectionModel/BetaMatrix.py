@@ -1,6 +1,6 @@
 import numpy as np
 
-from MathProtEnergyProc.IndexFunctions import GetIndexes
+from MathProtEnergyProc.IndexFunctions import GetIndexes, GetPairFromArray
 
 #Доли распределения теплоты по конкретному процессу
 def BetaProcess(betaProcessValues#Величины долей распределения теплоты по энергетически степеня свободы
@@ -30,11 +30,8 @@ class BetaMatrix(object):
                 energyPowersExtBetaDbNames.append((energyPowerName,ProcName))
         
         #Приводим описание пользовательских долей распределения некомпенсированных теплот каждого процесса к двойному массиву
-        nBetas = len(energyPowersVarBetaNames)#Число пользовательских энергетических степеней свободы
-        energyPowersUserBetaDbNames = []#Доли распределения некомпенсированной теплоты энергетических степеней свободы
-        for ind in range(nBetas):#Формируе массив из пар
-            energyPowersUserBetaDbNames.append((energyPowersVarBetaNames[ind],
-                                                processCoordinatesVarBetaNames[ind]))
+        energyPowersUserBetaDbNames = GetPairFromArray(energyPowersVarBetaNames,
+                                                       processCoordinatesVarBetaNames)
         
         #Получаем массив индексов
         self.__BetaIndexes = GetIndexes(energyPowersExtBetaDbNames,

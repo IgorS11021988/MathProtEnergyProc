@@ -47,3 +47,29 @@ def Get2Indexes(arrNamesSource1,#Массив 1 имен, в котором ищ
     
     #Выводим массив индексов
     return arrIndexes.copy()
+
+def GetPairFromArray(arrNames1,#Массив имен 1, для которых ищем индекс
+                     arrNames2#Массив имен 2, для которых ищем индекс
+                     ):
+    #Число имен
+    nNames = len(arrNames1)
+    
+    #Формируем массив из пар имен
+    arrPairNames = []
+    for ind in range(nNames):
+        arrPairNames += [(arrNames1[ind],
+                          arrNames2[ind])]
+    
+    #Выводим массив пар имен
+    return arrPairNames
+def GetPairIndexes(arrNames1Source,#Массив имен 1, в котором ищем индекс
+                   arrNames2Source,#Массив имен 2, в котором ищем индекс
+                   arrNames1,#Массив имен 1, для которых ищем индекс
+                   arrNames2#Массив имен 2, для которых ищем индекс
+                   ):
+    #Формируем пары индексов из массивов имен и выводим индексы
+    return GetIndexes(GetPairFromArray(arrNames1Source,
+                                       arrNames2Source),#Массив пар имен, в котором ищем индекс
+                      GetPairFromArray(arrNames1,
+                                       arrNames2)#Массив имен, для которых ищем индекс
+                      )

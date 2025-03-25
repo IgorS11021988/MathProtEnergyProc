@@ -1,7 +1,7 @@
 import numpy as np
 
 #Класс динамики системы, моделируемой методом математического прототипирования энергетических процессов
-class NonEqSystemQDyn(object):
+class NonEqSystemQDyn:
     #Инициализатор класса
     def __init__(self,
                  

@@ -1,8 +1,3 @@
-from MathProtEnergyProc.NonEqProcess.NonEqSystemBase import NonEqSystemBase
-from MathProtEnergyProc.NonEqProcess.NonEqSystemQBase import NonEqSystemQBase
-from MathProtEnergyProc.NonEqProcess.NonEqSystem import NonEqSystem
-from MathProtEnergyProc.NonEqProcess.NonEqSystemQ import NonEqSystemQ
-from MathProtEnergyProc.DynamicProcess.NonEqSystemDyn import NonEqSystemDyn, Model
-from MathProtEnergyProc.DynamicProcess.NonEqSystemQDyn import NonEqSystemQDyn, ModelQ
-from MathProtEnergyProc.ComputingExperiment.CountDynamics import CountDynamics, VectorModel, ModelLearning
-from MathProtEnergyProc.ComputingExperiment.CountDynamicsQ import CountDynamicsQ, VectorModelQ, ModelLearningQ
+from MathProtEnergyProc.NonEqProcess import *
+from MathProtEnergyProc.DynamicProcess import *
+from MathProtEnergyProc.ComputingExperiment import *

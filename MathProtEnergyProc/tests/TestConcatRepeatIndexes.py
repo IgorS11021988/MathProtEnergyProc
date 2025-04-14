@@ -4,28 +4,29 @@ from MathProtEnergyProc.IndexedNames import ConcatRepeatIndexes
 
 import unittest
 
-#Модульные тесты
+
+# Модульные тесты
 class TestConcatRepeatIndexes(unittest.TestCase):
     def setUp(self):
-        #Выполнить настройку тестов (если необходимо)
+        # Выполнить настройку тестов (если необходимо)
         pass
-    
+
     def tearDown(self):
         # Выполнить завершающие действия (если необходимо)
         pass
-    
-    #Модульные тесты
+
+    # Модульные тесты
     def testConcatRepeatIndexes1(self):
-        #Исходные данные
+        # Исходные данные
         rangeIndexes1 = (0, 2, 1)
         rangeIndexes2 = (1, 7, 2)
         rangeIndexes3 = (2, 14, 3)
         listIndexesDiapasons = [rangeIndexes1,
                                 rangeIndexes2,
                                 rangeIndexes3]
-        selectIndexes = [1, 2, 0]#Индексы окончательного выбора
-        
-        #Полученные индексы
+        selectIndexes = [1, 2, 0]  # Индексы окончательного выбора
+
+        # Полученные индексы
         IndexesEt = np.array([[0, 1,  2],
                               [0, 1,  5],
                               [0, 1,  8],
@@ -50,25 +51,26 @@ class TestConcatRepeatIndexes(unittest.TestCase):
                               [1, 5,  5],
                               [1, 5,  8],
                               [1, 5, 11]])
-        
-        #Генерируем случайные данные
-        Indexes = ConcatRepeatIndexes(listIndexesDiapasons#Список диапазонов индексов
+
+        # Генерируем случайные данные
+        Indexes = ConcatRepeatIndexes(listIndexesDiapasons  # Список диапазонов индексов
                                       )
-        
-        #Проверяем значения
+
+        # Проверяем значения
         deltaIndexes = np.max(np.abs(Indexes - IndexesEt))
         self.assertEqual(deltaIndexes, 0.0)
-        
-        #Генерируем случайные данные
-        Indexes = ConcatRepeatIndexes(listIndexesDiapasons,#Список диапазонов индексов
-                                      selectIndexes = selectIndexes#Индексы окончательного выбора 
+
+        # Генерируем случайные данные
+        Indexes = ConcatRepeatIndexes(listIndexesDiapasons,  # Список диапазонов индексов
+                                      selectIndexes=selectIndexes  # Индексы окончательного выбора
                                       )
-        
-        #Проверяем значения
-        deltaIndexes = np.max(np.abs(Indexes - IndexesEt[:,selectIndexes]))
+
+        # Проверяем значения
+        deltaIndexes = np.max(np.abs(Indexes - IndexesEt[:, selectIndexes]))
         self.assertEqual(deltaIndexes, 0.0)
+
     def testConcatRepeatIndexes2(self):
-        #Исходные данные
+        # Исходные данные
         rangeIndexes1 = (0, 5, 2)
         rangeIndexes2 = (1, 8, 3)
         rangeIndexes3 = (1, 7, 1)
@@ -77,9 +79,9 @@ class TestConcatRepeatIndexes(unittest.TestCase):
                                 rangeIndexes2,
                                 rangeIndexes3,
                                 rangeIndexes4]
-        selectIndexes = [2, 3, 0]#Индексы окончательного выбора
-        
-        #Полученные индексы
+        selectIndexes = [2, 3, 0]  # Индексы окончательного выбора
+
+        # Полученные индексы
         IndexesEt = np.array([[0, 1, 1,  3],
                               [0, 1, 1,  8],
                               [0, 1, 1, 13],
@@ -350,32 +352,33 @@ class TestConcatRepeatIndexes(unittest.TestCase):
                               [4, 7, 6, 13],
                               [4, 7, 6, 18],
                               [4, 7, 6, 23]])
-        
-        #Генерируем случайные данные
-        Indexes = ConcatRepeatIndexes(listIndexesDiapasons#Список диапазонов индексов
+
+        # Генерируем случайные данные
+        Indexes = ConcatRepeatIndexes(listIndexesDiapasons  # Список диапазонов индексов
                                       )
-        
-        #Проверяем значения
+
+        # Проверяем значения
         deltaIndexes = np.max(np.abs(Indexes - IndexesEt))
         self.assertEqual(deltaIndexes, 0.0)
-        
-        #Генерируем случайные данные
-        Indexes = ConcatRepeatIndexes(listIndexesDiapasons,#Список диапазонов индексов
-                                      selectIndexes = selectIndexes#Индексы окончательного выбора 
+
+        # Генерируем случайные данные
+        Indexes = ConcatRepeatIndexes(listIndexesDiapasons,  # Список диапазонов индексов
+                                      selectIndexes=selectIndexes  # Индексы окончательного выбора
                                       )
-        
-        #Проверяем значения
-        deltaIndexes = np.max(np.abs(Indexes - IndexesEt[:,selectIndexes]))
+
+        # Проверяем значения
+        deltaIndexes = np.max(np.abs(Indexes - IndexesEt[:, selectIndexes]))
         self.assertEqual(deltaIndexes, 0.0)
+
     def testConcatRepeatIndexes3(self):
-        #Исходные данные
+        # Исходные данные
         rangeIndexes1 = (2, 9, 2)
         rangeIndexes2 = (1, 10, 4)
         listIndexesDiapasons = [rangeIndexes1,
                                 rangeIndexes2]
-        selectIndexes = [1, 0]#Индексы окончательного выбора
-        
-        #Преобразованные матрицы
+        selectIndexes = [1, 0]  # Индексы окончательного выбора
+
+        # Преобразованные матрицы
         IndexesEt = np.array([[2, 1],
                               [2, 5],
                               [2, 9],
@@ -388,25 +391,25 @@ class TestConcatRepeatIndexes(unittest.TestCase):
                               [8, 1],
                               [8, 5],
                               [8, 9]])
-        
-        
-        #Генерируем случайные данные
-        Indexes = ConcatRepeatIndexes(listIndexesDiapasons#Список диапазонов индексов
+
+        # Генерируем случайные данные
+        Indexes = ConcatRepeatIndexes(listIndexesDiapasons  # Список диапазонов индексов
                                       )
-        
-        #Проверяем значения
+
+        # Проверяем значения
         deltaIndexes = np.max(np.abs(Indexes - IndexesEt))
         self.assertEqual(deltaIndexes, 0.0)
-        
-        #Генерируем случайные данные
-        Indexes = ConcatRepeatIndexes(listIndexesDiapasons,#Список диапазонов индексов
-                                      selectIndexes = selectIndexes#Индексы окончательного выбора 
+
+        # Генерируем случайные данные
+        Indexes = ConcatRepeatIndexes(listIndexesDiapasons,  # Список диапазонов индексов
+                                      selectIndexes=selectIndexes  # Индексы окончательного выбора
                                       )
-        
-        #Проверяем значения
-        deltaIndexes = np.max(np.abs(Indexes - IndexesEt[:,selectIndexes]))
+
+        # Проверяем значения
+        deltaIndexes = np.max(np.abs(Indexes - IndexesEt[:, selectIndexes]))
         self.assertEqual(deltaIndexes, 0.0)
-         
-#Запустить тестирование
+
+
+# Запустить тестирование
 if __name__ == "__main__":
     unittest.main()

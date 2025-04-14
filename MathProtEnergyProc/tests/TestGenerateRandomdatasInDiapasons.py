@@ -4,19 +4,20 @@ from MathProtEnergyProc.DatasAugmentation import GenerateRandomdatasInDiapasons
 
 import unittest
 
-#Модульные тесты
+
+# Модульные тесты
 class TestGenerateRandomdatasInDiapasons(unittest.TestCase):
     def setUp(self):
-        #Выполнить настройку тестов (если необходимо)
+        # Выполнить настройку тестов (если необходимо)
         pass
-    
+
     def tearDown(self):
         # Выполнить завершающие действия (если необходимо)
         pass
-    
-    #Модульные тесты
+
+    # Модульные тесты
     def testGenerateRandomdatasInDiapasons1(self):
-        #Исходные данные
+        # Исходные данные
         minValues = [[1.1, 2.2, 5.5, 7.7],
                      [6.3, 2.3, 4.5, 5.5],
                      [2.7, 2.1, 3.3, 9.3],
@@ -28,8 +29,8 @@ class TestGenerateRandomdatasInDiapasons(unittest.TestCase):
                      [2.1, 7.4, 5.8, 4.1],
                      [8.8, 7.9, 4.2, 6.3]]
         nPoints = [5, 10, 7, 3, 2]
-        
-        #Преобразованные матрицы
+
+        # Преобразованные матрицы
         minValuesAll = [[1.1, 2.2, 5.5, 7.7],
                         [1.1, 2.2, 5.5, 7.7],
                         [1.1, 2.2, 5.5, 7.7],
@@ -84,18 +85,19 @@ class TestGenerateRandomdatasInDiapasons(unittest.TestCase):
                         [2.1, 7.4, 5.8, 4.1],
                         [8.8, 7.9, 4.2, 6.3],
                         [8.8, 7.9, 4.2, 6.3]]
-        
-        #Генерируем случайные данные
-        rndDatas = GenerateRandomdatasInDiapasons(minValues,#Минимальные значения величин
-                                                  maxValues,#Максимальные значения величин
-                                                  nPoints#Числа точек в соответствующих диапазонах
+
+        # Генерируем случайные данные
+        rndDatas = GenerateRandomdatasInDiapasons(minValues,  # Минимальные значения величин
+                                                  maxValues,  # Максимальные значения величин
+                                                  nPoints  # Числа точек в соответствующих диапазонах
                                                   )
-        
-        #Проверяем значения
+
+        # Проверяем значения
         self.assertTrue(np.all(rndDatas < maxValuesAll))
         self.assertTrue(np.all(rndDatas >= minValuesAll))
+
     def testGenerateRandomdatasInDiapasons2(self):
-        #Исходные данные
+        # Исходные данные
         minValues = [[1.1, 1.2, 4.5],
                      [5.3, 1.3, 3.5],
                      [1.7, 1.1, 1.3],
@@ -107,8 +109,8 @@ class TestGenerateRandomdatasInDiapasons(unittest.TestCase):
                      [2.3, 7.4, 5.8],
                      [9.8, 7.9, 7.2]]
         nPoints = [6, 14, 5, 6, 1]
-        
-        #Преобразованные матрицы
+
+        # Преобразованные матрицы
         minValuesAll = [[1.1, 1.2, 4.5],
                         [1.1, 1.2, 4.5],
                         [1.1, 1.2, 4.5],
@@ -173,18 +175,19 @@ class TestGenerateRandomdatasInDiapasons(unittest.TestCase):
                         [2.3, 7.4, 5.8],
                         [2.3, 7.4, 5.8],
                         [9.8, 7.9, 7.2]]
-        
-        #Генерируем случайные данные
-        rndDatas = GenerateRandomdatasInDiapasons(minValues,#Минимальные значения величин
-                                                  maxValues,#Максимальные значения величин
-                                                  nPoints#Числа точек в соответствующих диапазонах
+
+        # Генерируем случайные данные
+        rndDatas = GenerateRandomdatasInDiapasons(minValues,  # Минимальные значения величин
+                                                  maxValues,  # Максимальные значения величин
+                                                  nPoints  # Числа точек в соответствующих диапазонах
                                                   )
-        
-        #Проверяем значения
+
+        # Проверяем значения
         self.assertTrue(np.all(rndDatas < maxValuesAll))
         self.assertTrue(np.all(rndDatas >= minValuesAll))
+
     def testGenerateRandomdatasInDiapasons3(self):
-        #Исходные данные
+        # Исходные данные
         minValues = [[3.1, 2.2, 5.5, 7.7, 10.1],
                      [5.1, 2.3, 4.5, 4.5, 11.3],
                      [3.5, 2.1, 3.3, 6.3, 13.5]]
@@ -192,8 +195,8 @@ class TestGenerateRandomdatasInDiapasons(unittest.TestCase):
                      [9.3, 4.3, 8.5, 7.5, 20.1],
                      [7.7, 5.1, 6.3, 8.7, 27.3]]
         nPoints = [3, 2, 5]
-        
-        #Преобразованные матрицы
+
+        # Преобразованные матрицы
         minValuesAll = [[3.1, 2.2, 5.5, 7.7, 10.1],
                         [3.1, 2.2, 5.5, 7.7, 10.1],
                         [3.1, 2.2, 5.5, 7.7, 10.1],
@@ -214,17 +217,18 @@ class TestGenerateRandomdatasInDiapasons(unittest.TestCase):
                         [7.7, 5.1, 6.3, 8.7, 27.3],
                         [7.7, 5.1, 6.3, 8.7, 27.3],
                         [7.7, 5.1, 6.3, 8.7, 27.3]]
-        
-        #Генерируем случайные данные
-        rndDatas = GenerateRandomdatasInDiapasons(minValues,#Минимальные значения величин
-                                                  maxValues,#Максимальные значения величин
-                                                  nPoints#Числа точек в соответствующих диапазонах
+
+        # Генерируем случайные данные
+        rndDatas = GenerateRandomdatasInDiapasons(minValues,  # Минимальные значения величин
+                                                  maxValues,  # Максимальные значения величин
+                                                  nPoints  # Числа точек в соответствующих диапазонах
                                                   )
-        
-        #Проверяем значения
+
+        # Проверяем значения
         self.assertTrue(np.all(rndDatas < maxValuesAll))
         self.assertTrue(np.all(rndDatas >= minValuesAll))
-         
-#Запустить тестирование
+
+
+# Запустить тестирование
 if __name__ == "__main__":
     unittest.main()

@@ -1,2 +1,2 @@
-from .CountDynamics import CountDynamics, VectorModel, ModelLearning
-from .CountDynamicsQ import CountDynamicsQ, VectorModelQ, ModelLearningQ
+from .CountDynamics import CountDynamics, VectorModel
+from .CountDynamicsQ import CountDynamicsQ, VectorModelQ

@@ -4,19 +4,20 @@ from MathProtEnergyProc.DatasAugmentation import HStackMatrixRepeat
 
 import unittest
 
-#Модульные тесты
+
+# Модульные тесты
 class TestHStackMatrixRepeat(unittest.TestCase):
     def setUp(self):
-        #Выполнить настройку тестов (если необходимо)
+        # Выполнить настройку тестов (если необходимо)
         pass
-    
+
     def tearDown(self):
         # Выполнить завершающие действия (если необходимо)
         pass
-    
-    #Модульные тесты
+
+    # Модульные тесты
     def testHStackMatrixRepeat1(self):
-        #Исходные данные
+        # Исходные данные
         matrValues1 = [[1.1, 2.2, 5.5, 7.7],
                        [6.3, 2.3, 4.5, 5.5],
                        [2.7, 2.1, 3.3, 9.3],
@@ -43,8 +44,8 @@ class TestHStackMatrixRepeat(unittest.TestCase):
         matrValues4 = [4.9, 3.6]
         repeatValues = [True, False, True]
         Indexes = [3, 2, 0, 4, 1, 7, 5, 8, 6, 9, 10]
-        
-        #Преобразованные матрицы
+
+        # Преобразованные матрицы
         matrValuesRezEt = np.array([[1.1, 2.2, 5.5, 7.7, 4.1, 3.2, 6.5, 4.1, 3.2, 6.5, 4.9],
                                     [1.1, 2.2, 5.5, 7.7, 4.1, 3.2, 6.5, 4.1, 3.2, 6.5, 3.6],
                                     [1.1, 2.2, 5.5, 7.7, 8.3, 4.3, 8.5, 8.3, 4.3, 8.5, 4.9],
@@ -75,31 +76,32 @@ class TestHStackMatrixRepeat(unittest.TestCase):
                                     [7.8, 6.9, 1.2, 2.3, 8.3, 4.3, 8.5, 7.3, 2.9, 5.9, 3.6],
                                     [7.8, 6.9, 1.2, 2.3, 6.7, 5.1, 6.3, 1.5, 4.1, 8.4, 4.9],
                                     [7.8, 6.9, 1.2, 2.3, 6.7, 5.1, 6.3, 1.5, 4.1, 8.4, 3.6]])
-        
-        #Генерируем случайные данные
-        matrValuesRez = HStackMatrixRepeat((matrValues1,#Величины 1
-                                            matrValues2,#Величины 2
-                                            matrValues3,#Величины 3
-                                            matrValues4#Величины 4
+
+        # Генерируем случайные данные
+        matrValuesRez = HStackMatrixRepeat((matrValues1,  # Величины 1
+                                            matrValues2,  # Величины 2
+                                            matrValues3,  # Величины 3
+                                            matrValues4  # Величины 4
                                             ), repeatValues)
-        
-        #Проверяем значения
+
+        # Проверяем значения
         dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt))
         self.assertEqual(dMatrValuesRez, 0.0)
-        
-        #Генерируем случайные данные
-        matrValuesRez = HStackMatrixRepeat((matrValues1,#Величины 1
-                                            matrValues2,#Величины 2
-                                            matrValues3,#Величины 3
-                                            matrValues4#Величины 4
+
+        # Генерируем случайные данные
+        matrValuesRez = HStackMatrixRepeat((matrValues1,  # Величины 1
+                                            matrValues2,  # Величины 2
+                                            matrValues3,  # Величины 3
+                                            matrValues4  # Величины 4
                                             ), repeatValues,
                                             Indexes)
-        
-        #Проверяем значения
-        dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt[:,Indexes]))
+
+        # Проверяем значения
+        dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt[:, Indexes]))
         self.assertEqual(dMatrValuesRez, 0.0)
+
     def testHStackMatrixRepeat2(self):
-        #Исходные данные
+        # Исходные данные
         matrValues1 = [[1.1, 1.2, 4.5],
                        [5.3, 1.3, 3.5],
                        [1.7, 1.1, 1.3],
@@ -159,8 +161,8 @@ class TestHStackMatrixRepeat(unittest.TestCase):
                        [9.4, 8.3, 1.5, 8.8]]
         repeatValues = [True, False, True, False]
         Indexes = [7, 3, 4, 0, 1, 5, 8, 9, 10, 12, 14]
-        
-        #Преобразованные матрицы
+
+        # Преобразованные матрицы
         matrValuesRezEt = np.array([[1.1, 1.2, 4.5, 3.1, 3.2, 6.5, 4.5, 5.6, 3.1, 3.2, 3.7, 3.4, 3.2, 4.2, 1.8],
                                     [1.1, 1.2, 4.5, 3.1, 3.2, 6.5, 4.5, 5.6, 3.1, 3.2, 2.2, 8.2, 1.3, 5.2, 4.8],
                                     [1.1, 1.2, 4.5, 3.1, 3.2, 6.5, 4.5, 5.6, 3.1, 3.2, 1.5, 4.3, 4.2, 7.3, 8.0],
@@ -197,33 +199,34 @@ class TestHStackMatrixRepeat(unittest.TestCase):
                                     [3.7, 2.5, 6.2, 8.3, 2.3, 8.5, 1.1, 7.7, 6.3, 2.3, 3.7, 2.2, 2.9, 9.3, 4.5],
                                     [3.7, 2.5, 6.2, 8.3, 2.3, 8.5, 1.1, 7.7, 6.3, 2.3, 2.2, 3.7, 6.2, 0.2, 7.6],
                                     [3.7, 2.5, 6.2, 8.3, 2.3, 8.5, 1.1, 7.7, 6.3, 2.3, 1.5, 9.4, 8.3, 1.5, 8.8]])
-        
-        #Генерируем случайные данные
-        matrValuesRez = HStackMatrixRepeat((matrValues1,#Величины 1
-                                            matrValues2,#Величины 2
-                                            matrValues3,#Величины 3
-                                            matrValues4,#Величины 4
-                                            matrValues5#Величины 5
+
+        # Генерируем случайные данные
+        matrValuesRez = HStackMatrixRepeat((matrValues1,  # Величины 1
+                                            matrValues2,  # Величины 2
+                                            matrValues3,  # Величины 3
+                                            matrValues4,  # Величины 4
+                                            matrValues5  # Величины 5
                                             ), repeatValues)
-        
-        #Проверяем значения
+
+        # Проверяем значения
         dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt))
         self.assertEqual(dMatrValuesRez, 0.0)
-        
-        #Генерируем случайные данные
-        matrValuesRez = HStackMatrixRepeat((matrValues1,#Величины 1
-                                            matrValues2,#Величины 2
-                                            matrValues3,#Величины 3
-                                            matrValues4,#Величины 4
-                                            matrValues5#Величины 5
+
+        # Генерируем случайные данные
+        matrValuesRez = HStackMatrixRepeat((matrValues1,  # Величины 1
+                                            matrValues2,  # Величины 2
+                                            matrValues3,  # Величины 3
+                                            matrValues4,  # Величины 4
+                                            matrValues5  # Величины 5
                                             ), repeatValues,
                                             Indexes)
-        
-        #Проверяем значения
-        dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt[:,Indexes]))
+
+        # Проверяем значения
+        dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt[:, Indexes]))
         self.assertEqual(dMatrValuesRez, 0.0)
+
     def testHStackMatrixRepeat3(self):
-        #Исходные данные
+        # Исходные данные
         matrValues1 = [[3.1, 2.2, 5.5, 7.7, 10.1],
                        [5.1, 2.3, 4.5, 4.5, 11.3],
                        [3.5, 2.1, 3.3, 6.3, 13.5]]
@@ -234,8 +237,8 @@ class TestHStackMatrixRepeat(unittest.TestCase):
         matrValues3 = [4.7, 3.2, 2.8]
         repeatValues = [True, True]
         Indexes = [7, 3, 4, 0, 1, 5]
-        
-        #Преобразованные матрицы
+
+        # Преобразованные матрицы
         matrValuesRezEt = np.array([[3.1, 2.2, 5.5, 7.7, 10.1, 4.7, 3.2, 4.7],
                                     [3.1, 2.2, 5.5, 7.7, 10.1, 4.7, 3.2, 3.2],
                                     [3.1, 2.2, 5.5, 7.7, 10.1, 4.7, 3.2, 2.8],
@@ -272,28 +275,29 @@ class TestHStackMatrixRepeat(unittest.TestCase):
                                     [3.5, 2.1, 3.3, 6.3, 13.5, 4.5, 3.4, 4.7],
                                     [3.5, 2.1, 3.3, 6.3, 13.5, 4.5, 3.4, 3.2],
                                     [3.5, 2.1, 3.3, 6.3, 13.5, 4.5, 3.4, 2.8]])
-        
-        #Генерируем случайные данные
-        matrValuesRez = HStackMatrixRepeat((matrValues1,#Величины 1
-                                            matrValues2,#Величины 2
-                                            matrValues3#Величины 3
+
+        # Генерируем случайные данные
+        matrValuesRez = HStackMatrixRepeat((matrValues1,  # Величины 1
+                                            matrValues2,  # Величины 2
+                                            matrValues3  # Величины 3
                                             ), repeatValues)
-        
-        #Проверяем значения
+
+        # Проверяем значения
         dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt))
         self.assertEqual(dMatrValuesRez, 0.0)
-        
-        #Генерируем случайные данные
-        matrValuesRez = HStackMatrixRepeat((matrValues1,#Величины 1
-                                            matrValues2,#Величины 2
-                                            matrValues3#Величины 3
+
+        # Генерируем случайные данные
+        matrValuesRez = HStackMatrixRepeat((matrValues1,  # Величины 1
+                                            matrValues2,  # Величины 2
+                                            matrValues3  # Величины 3
                                             ), repeatValues,
                                             Indexes)
-        
-        #Проверяем значения
-        dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt[:,Indexes]))
+
+        # Проверяем значения
+        dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt[:, Indexes]))
         self.assertEqual(dMatrValuesRez, 0.0)
-         
-#Запустить тестирование
+
+
+# Запустить тестирование
 if __name__ == "__main__":
     unittest.main()

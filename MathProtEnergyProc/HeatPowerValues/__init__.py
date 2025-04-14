@@ -1,1 +1,1 @@
-from .Output import *
+from MathProtEnergyProcBase.HeatPowerValues import *

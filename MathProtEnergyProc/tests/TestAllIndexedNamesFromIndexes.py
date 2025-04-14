@@ -4,19 +4,20 @@ from MathProtEnergyProc.IndexedNames import AllIndexedNamesFromIndexes
 
 import unittest
 
-#Модульные тесты
+
+# Модульные тесты
 class TestAllIndexedNamesFromIndexes(unittest.TestCase):
     def setUp(self):
-        #Выполнить настройку тестов (если необходимо)
+        # Выполнить настройку тестов (если необходимо)
         pass
-    
+
     def tearDown(self):
         # Выполнить завершающие действия (если необходимо)
         pass
-    
-    #Модульные тесты
+
+    # Модульные тесты
     def testAllIndexedNamesFromIndexes1(self):
-        #Исходные данные
+        # Исходные данные
         Indexes = np.array([[0, 1,  2],
                             [0, 1,  5],
                             [0, 1,  8],
@@ -41,20 +42,20 @@ class TestAllIndexedNamesFromIndexes(unittest.TestCase):
                             [1, 5,  5],
                             [1, 5,  8],
                             [1, 5, 11]])
-        beginName1 = "v"#Начало имени
-        endName1 = ""#Конец имени
-        sepName1 = "_"#Раздлитель имени
+        beginName1 = "v"  # Начало имени
+        endName1 = ""  # Конец имени
+        sepName1 = "_"  # Раздлитель имени
         selectIndexes1 = [0, 2]
-        beginName2 = "w"#Начало имени
-        endName2 = ""#Конец имени
-        sepName2 = "_"#Раздлитель имени
+        beginName2 = "w"  # Начало имени
+        endName2 = ""  # Конец имени
+        sepName2 = "_"  # Раздлитель имени
         selectIndexes2 = [1, 0]
-        partsNames = [(beginName1,endName1,sepName1,selectIndexes1),
-                      (beginName2,endName2,sepName2,selectIndexes2)]
-        
-        #Индексированные имена
+        partsNames = [(beginName1, endName1, sepName1, selectIndexes1),
+                      (beginName2, endName2, sepName2, selectIndexes2)]
+
+        # Индексированные имена
         IndexedNamesEt1 = ["v0_2",
-                           "v0_5", 
+                           "v0_5",
                            "v0_8",
                            "v0_11",
                            "v0_2",
@@ -78,7 +79,7 @@ class TestAllIndexedNamesFromIndexes(unittest.TestCase):
                            "v1_8",
                            "v1_11"]
         IndexedNamesEt2 = ["w1_0",
-                           "w1_0", 
+                           "w1_0",
                            "w1_0",
                            "w1_0",
                            "w3_0",
@@ -101,18 +102,19 @@ class TestAllIndexedNamesFromIndexes(unittest.TestCase):
                            "w5_1",
                            "w5_1",
                            "w5_1"]
-        
-        #Генерируем индексированные имена
+
+        # Генерируем индексированные имена
         [IndexedNames1,
-         IndexedNames2] = AllIndexedNamesFromIndexes(Indexes,#Индексы
-                                                     partsNames#Части имен
+         IndexedNames2] = AllIndexedNamesFromIndexes(Indexes,  # Индексы
+                                                     partsNames  # Части имен
                                                      )
-        
-        #Проверяем значения
+
+        # Проверяем значения
         self.assertTrue(np.all(IndexedNames1 == IndexedNamesEt1))
         self.assertTrue(np.all(IndexedNames2 == IndexedNamesEt2))
+
     def testAllIndexedNamesFromIndexes2(self):
-        #Исходные данные
+        # Исходные данные
         Indexes = [[0, 1, 1,  3],
                    [0, 1, 1,  8],
                    [0, 1, 1, 13],
@@ -383,23 +385,23 @@ class TestAllIndexedNamesFromIndexes(unittest.TestCase):
                    [4, 7, 6, 13],
                    [4, 7, 6, 18],
                    [4, 7, 6, 23]]
-        beginName1 = "b"#Начало имени
-        endName1 = "e"#Конец имени
-        sepName1 = "_"#Раздлитель имени
+        beginName1 = "b"  # Начало имени
+        endName1 = "e"  # Конец имени
+        sepName1 = "_"  # Раздлитель имени
         selectIndexes1 = [1, 3]
-        beginName2 = "bv"#Начало имени
-        endName2 = "ev"#Конец имени
-        sepName2 = "@"#Раздлитель имени
+        beginName2 = "bv"  # Начало имени
+        endName2 = "ev"  # Конец имени
+        sepName2 = "@"  # Раздлитель имени
         selectIndexes2 = [2]
-        beginName3 = "bw"#Начало имени
-        endName3 = "ew"#Конец имени
-        sepName3 = "&"#Раздлитель имени
+        beginName3 = "bw"  # Начало имени
+        endName3 = "ew"  # Конец имени
+        sepName3 = "&"  # Раздлитель имени
         selectIndexes3 = [0, 2, 3]
-        partsNames = [(beginName1,endName1,sepName1,selectIndexes1),
-                      (beginName2,endName2,sepName2,selectIndexes2),
-                      (beginName3,endName3,sepName3,selectIndexes3)]
-        
-        #Индексированные имена
+        partsNames = [(beginName1, endName1, sepName1, selectIndexes1),
+                      (beginName2, endName2, sepName2, selectIndexes2),
+                      (beginName3, endName3, sepName3, selectIndexes3)]
+
+        # Индексированные имена
         IndexedNamesEt1 = ["b1_3e",
                            "b1_8e",
                            "b1_13e",
@@ -1210,20 +1212,21 @@ class TestAllIndexedNamesFromIndexes(unittest.TestCase):
                            "bw4&6&13ew",
                            "bw4&6&18ew",
                            "bw4&6&23ew"]
-        
-        #Генерируем индексированные имена
+
+        # Генерируем индексированные имена
         [IndexedNames1,
          IndexedNames2,
-         IndexedNames3] = AllIndexedNamesFromIndexes(Indexes,#Индексы
-                                                     partsNames#Части имен
+         IndexedNames3] = AllIndexedNamesFromIndexes(Indexes,  # Индексы
+                                                     partsNames  # Части имен
                                                      )
-        
-        #Проверяем значения
+
+        # Проверяем значения
         self.assertTrue(np.all(IndexedNames1 == IndexedNamesEt1))
         self.assertTrue(np.all(IndexedNames2 == IndexedNamesEt2))
         self.assertTrue(np.all(IndexedNames3 == IndexedNamesEt3))
+
     def testAllIndexedNamesFromIndexes3(self):
-        #Исходные данные
+        # Исходные данные
         Indexes = [[2, 1],
                    [2, 5],
                    [2, 9],
@@ -1236,13 +1239,13 @@ class TestAllIndexedNamesFromIndexes(unittest.TestCase):
                    [8, 1],
                    [8, 5],
                    [8, 9]]
-        beginName = "beg"#Начало имени
-        endName = "end"#Конец имени
-        sepName = "@"#Раздлитель имени
+        beginName = "beg"  # Начало имени
+        endName = "end"  # Конец имени
+        sepName = "@"  # Раздлитель имени
         selectIndexes = [1, 0]
-        partsNames = [(beginName,endName,sepName,selectIndexes)]
-        
-        #Индексированные имена
+        partsNames = [(beginName, endName, sepName, selectIndexes)]
+
+        # Индексированные имена
         IndexedNamesEt = ["beg1@2end",
                           "beg5@2end",
                           "beg9@2end",
@@ -1255,15 +1258,16 @@ class TestAllIndexedNamesFromIndexes(unittest.TestCase):
                           "beg1@8end",
                           "beg5@8end",
                           "beg9@8end"]
-        
-        #Генерируем индексированные имена
-        IndexedNames = AllIndexedNamesFromIndexes(Indexes,#Индексы
-                                                  partsNames#Части имен
+
+        # Генерируем индексированные имена
+        IndexedNames = AllIndexedNamesFromIndexes(Indexes,  # Индексы
+                                                  partsNames  # Части имен
                                                   )
-        
-        #Проверяем значения
+
+        # Проверяем значения
         self.assertTrue(np.all(IndexedNames[0] == IndexedNamesEt))
-         
-#Запустить тестирование
+
+
+# Запустить тестирование
 if __name__ == "__main__":
     unittest.main()

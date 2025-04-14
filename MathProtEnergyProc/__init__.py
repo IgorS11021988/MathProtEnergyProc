@@ -1,3 +1,5 @@
-from MathProtEnergyProc.NonEqProcess import *
-from MathProtEnergyProc.DynamicProcess import *
-from MathProtEnergyProc.ComputingExperiment import *
+from MathProtEnergyProcBase import *
+
+from .NonEqProcess import *
+from .DynamicProcess import *
+from .ComputingExperiment import *

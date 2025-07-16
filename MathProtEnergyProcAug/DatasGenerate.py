@@ -1,6 +1,27 @@
 import numpy as np
 
 
+# Гененрируем локально-равномерно распределенные величины
+def GenerateRandomdatasInDiapasons(minValues,  # Минимальные значения величин
+                                   maxValues,  # Максимальные значения величин
+                                   nPoints  # Числа точек в соответствующих диапазонах
+                                   ):  # Конкатенация с размножением двух матриц
+    # Матрицы максимальных и минимальных величин приводим к массиву numpy
+    aMinValues = np.array(minValues)  # Минимальные значения величин
+    aMaxValues = np.array(maxValues)  # Максимальные значения величин
+
+    # Получаем матрицу приращений
+    deltaValues = aMaxValues - aMinValues
+
+    # Приодим минимальные величины и матрицу приращений в соответсвие с индексами
+    aMinValues = np.repeat(aMinValues, nPoints, axis=0)  # Минимальные величины
+    deltaValues = np.repeat(deltaValues, nPoints, axis=0)  # Приращения величин
+
+    # Получаем случайные величины
+    (nRows, nColumns) = aMinValues.shape  # Число рядов и колонок
+    return aMinValues + deltaValues * np.random.rand(nRows, nColumns)  # Случайные числа
+
+
 # Приведение одномерного массива к матрице-столбцу
 def ToMatrixOneColumn(matr):
     if len(matr.shape) == 1:
@@ -34,29 +55,19 @@ def HStackMatrixRepeatTwo(values1,  # Величины 1
     rez = (np.repeat(aValues1, nRows2, axis=0),  # Матрица 1
            np.full((nRows1, aValues2.size), aValues2.reshape(1, -1)).reshape(-1, nColumns2)  # Матрица 2
            )
-    
+
     # Конкатенуем матрицы и выбираем индексы (при необходимости)
     isNeedConcatValuesIndexes = concatValuesIndexesList is not None
     if ConcatValues or isNeedConcatValuesIndexes:
-        # Конкатенуем по горизонтали размноженные матрицы
+        # Конкатенуем индексы
         rez = np.hstack(rez)
 
         # Выбираем индексы (при необходимости)
         if isNeedConcatValuesIndexes:
-            if ConcatValues:
-                # Формируем индексы
-                _inds = []
-                for indexes in concatValuesIndexesList:
-                    _inds += indexes
-                
-                # Выбираем подматрицу в соответствие с индексами
-                rez = rez[:, _inds]
-            else:
-                # Формируем массив выбранных подматриц
-                _rez = []
-                for indexes in concatValuesIndexesList:
-                    _rez.append(rez[:, indexes])
-                rez = _rez
+            _rez = []
+            for indexes in concatValuesIndexesList:
+                _rez.append(rez[:, indexes])
+            rez = _rez
 
     # Выводим результат
     return rez
@@ -112,3 +123,34 @@ def HVStackMatrixRepeat(listsConcatedValues,  # Списки массивов к
         return ConcatValues[:, aConcatValuesIndexes]
     else:
         return ConcatValues
+
+
+# Аугментируем данные для вычислительного эксперимента
+def ComputingExperimentBegDatasAugmentation(settingParametersValues,  # Значения задаваемых параметров системы
+                                            randomParametersValues,  # Значения случайно сгенерированных параметров системы
+                                            parametersState0Indexes,  # Индексы начального состояния системы
+                                            systemParametersIndexes  # Индексы параметров системы
+                                            ):
+    # Конкатенуем данные и выделяем параметры системы и ее начальное состояние
+    return HStackMatrixRepeatTwo(settingParametersValues,
+                                 randomParametersValues,
+                                 ConcatValues=True,
+                                 concatValuesIndexesList=[parametersState0Indexes,
+                                                          systemParametersIndexes]
+                                 )
+
+
+def ComputingExperimentBegDatasAugmentationQ(settingParametersValues,  # Значения задаваемых параметров системы
+                                             randomParametersValues,  # Значения случайно сгенерированных параметров системы
+                                             parametersState0Indexes,  # Индексы начального состояния системы
+                                             reducedTemperatures0Indexes,  # Индексы начальных приведенных температур системы
+                                             systemParametersIndexes  # Индексы параметров системы
+                                             ):
+    # Конкатенуем данные и выделяем параметры системы и ее начальное состояние
+    return HStackMatrixRepeatTwo(settingParametersValues,
+                                 randomParametersValues,
+                                 ConcatValues=True,
+                                 concatValuesIndexesList=[parametersState0Indexes,
+                                                          reducedTemperatures0Indexes,
+                                                          systemParametersIndexes]
+                                 )

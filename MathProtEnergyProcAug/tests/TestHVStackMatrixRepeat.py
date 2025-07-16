@@ -1,6 +1,6 @@
 import numpy as np
 
-from MathProtEnergyProc.DatasIntegration import HVStackMatrixRepeat
+from MathProtEnergyProc.DatasAugmentation import HVStackMatrixRepeat
 
 import unittest
 

@@ -1,6 +1,6 @@
 import numpy as np
 
-from MathProtEnergyProc.DatasIntegration import HStackMatrixRepeatTwo
+from MathProtEnergyProc.DatasAugmentation import HStackMatrixRepeatTwo
 
 import unittest
 
@@ -29,7 +29,6 @@ class TestHStackMatrixRepeatTwo(unittest.TestCase):
         Indexes1 = [0, 2, 3, 5]
         Indexes2 = [1, 4]
         concatIndexesList = [Indexes1, Indexes2]
-        allIndexes = [0, 2, 3, 5, 1, 4]
 
         # Преобразованные матрицы
         matrValuesRezEt = np.array([[1.1, 2.2, 5.5, 7.7, 4.1, 3.2, 6.5],
@@ -117,7 +116,9 @@ class TestHStackMatrixRepeatTwo(unittest.TestCase):
                                               )
 
         # Проверяем значения
-        dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt[:, allIndexes]))
+        dMatrValuesRez = np.max(np.abs(matrValuesRez[0] - matrValuesRezEt[:, Indexes1]))
+        self.assertEqual(dMatrValuesRez, 0.0)
+        dMatrValuesRez = np.max(np.abs(matrValuesRez[1] - matrValuesRezEt[:, Indexes2]))
         self.assertEqual(dMatrValuesRez, 0.0)
 
         # Генерируем случайные данные
@@ -147,7 +148,6 @@ class TestHStackMatrixRepeatTwo(unittest.TestCase):
         Indexes2 = [1, 5, 4]
         Indexes3 = [1, 7]
         concatIndexesList = [Indexes1, Indexes2, Indexes3]
-        allIndexes = [0, 3, 6, 2, 1, 5, 4, 1, 7]
 
         # Преобразованные матрицы
         matrValuesRezEt = np.array([[1.1, 1.2, 4.5, 3.1, 3.2, 6.5, 4.5, 5.6],
@@ -226,7 +226,11 @@ class TestHStackMatrixRepeatTwo(unittest.TestCase):
                                               )
 
         # Проверяем значения
-        dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt[:, allIndexes]))
+        dMatrValuesRez = np.max(np.abs(matrValuesRez[0] - matrValuesRezEt[:, Indexes1]))
+        self.assertEqual(dMatrValuesRez, 0.0)
+        dMatrValuesRez = np.max(np.abs(matrValuesRez[1] - matrValuesRezEt[:, Indexes2]))
+        self.assertEqual(dMatrValuesRez, 0.0)
+        dMatrValuesRez = np.max(np.abs(matrValuesRez[2] - matrValuesRezEt[:, Indexes3]))
         self.assertEqual(dMatrValuesRez, 0.0)
 
         # Генерируем случайные данные
@@ -255,7 +259,6 @@ class TestHStackMatrixRepeatTwo(unittest.TestCase):
                        [4.5, 3.4]]
         Indexes1 = [0, 3, 6, 2]
         concatIndexesList = [Indexes1]
-        allIndexes = [0, 3, 6, 2]
 
         # Преобразованные матрицы
         matrValuesRezEt = np.array([[3.1, 2.2, 5.5, 7.7, 10.1, 4.7, 3.2],
@@ -334,7 +337,7 @@ class TestHStackMatrixRepeatTwo(unittest.TestCase):
                                               )
 
         # Проверяем значения
-        dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt[:, allIndexes]))
+        dMatrValuesRez = np.max(np.abs(matrValuesRez[0] - matrValuesRezEt[:, Indexes1]))
         self.assertEqual(dMatrValuesRez, 0.0)
 
         # Генерируем случайные данные

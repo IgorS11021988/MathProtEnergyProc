@@ -1,7 +1,7 @@
 README.txt
 setup.py
 testMathProtEnergyProc.py
-MathProtEnergyProc/DatasAugmentation.py
+MathProtEnergyProc/DatasIntegration.py
 MathProtEnergyProc/IndexedNames.py
 MathProtEnergyProc/IntegrateDyn.py
 MathProtEnergyProc/RepeatLastRowsMatrix.py
@@ -23,10 +23,7 @@ MathProtEnergyProc/NonEqProcess/NonEqSystemQ.py
 MathProtEnergyProc/NonEqProcess/__init__.py
 MathProtEnergyProc/tests/TestAllIndexedNames.py
 MathProtEnergyProc/tests/TestAllIndexedNamesFromIndexes.py
-MathProtEnergyProc/tests/TestComputingExperimentBegDatasAugmentation.py
-MathProtEnergyProc/tests/TestComputingExperimentBegDatasAugmentationQ.py
 MathProtEnergyProc/tests/TestConcatRepeatIndexes.py
-MathProtEnergyProc/tests/TestGenerateRandomdatasInDiapasons.py
 MathProtEnergyProc/tests/TestHStackMatrixRepeat.py
 MathProtEnergyProc/tests/TestHStackMatrixRepeatTwo.py
 MathProtEnergyProc/tests/TestHVStackMatrixRepeat.py

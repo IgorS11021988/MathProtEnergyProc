@@ -5,17 +5,17 @@ from MathProtEnergyProc.IntegrateDyn import standartIntegrateDyn, stepIntegrateD
 from MathProtEnergyProc import NonEqSystemQ
 from MathProtEnergyProc import NonEqSystemQDyn, ModelQ
 
-from MathProtEnergyProc.tests.UnitTestExamples.TestNonEqQ1 import *
-from MathProtEnergyProc.tests.UnitTestExamples.TestNonEqQ2 import *
-from MathProtEnergyProc.tests.UnitTestExamples.TestNonEqQ3 import *
+from MathProtEnergyProc.tests.UnitTestExamples.TestNonEqQ1 import CountSystemQ1, CountStateQ1
+from MathProtEnergyProc.tests.UnitTestExamples.TestNonEqQ2 import CountSystemQ2, CountStateQ2
+from MathProtEnergyProc.tests.UnitTestExamples.TestNonEqQ3 import CountSystemQ3, CountStateQ3
 
-from MathProtEnergyProc.tests.UnitTestExamples.fU1 import *
-from MathProtEnergyProc.tests.UnitTestExamples.fU2 import *
-from MathProtEnergyProc.tests.UnitTestExamples.fU3 import *
+from MathProtEnergyProc.tests.UnitTestExamples.fU1 import fU1
+from MathProtEnergyProc.tests.UnitTestExamples.fU2 import fU2
+from MathProtEnergyProc.tests.UnitTestExamples.fU3 import fU3
 
-from MathProtEnergyProc.tests.UnitTestExamples.FunCharQ1 import *
-from MathProtEnergyProc.tests.UnitTestExamples.FunCharQ2 import *
-from MathProtEnergyProc.tests.UnitTestExamples.FunCharQ3 import *
+from MathProtEnergyProc.tests.UnitTestExamples.FunCharQ1 import FunCharQ1
+from MathProtEnergyProc.tests.UnitTestExamples.FunCharQ2 import FunCharQ2
+from MathProtEnergyProc.tests.UnitTestExamples.FunCharQ3 import FunCharQ3
 
 import unittest
 

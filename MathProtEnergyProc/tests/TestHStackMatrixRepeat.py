@@ -93,8 +93,7 @@ class TestHStackMatrixRepeat(unittest.TestCase):
                                             matrValues2,  # Величины 2
                                             matrValues3,  # Величины 3
                                             matrValues4  # Величины 4
-                                            ), repeatValues,
-                                            Indexes)
+                                            ), repeatValues, Indexes)
 
         # Проверяем значения
         dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt[:, Indexes]))
@@ -218,8 +217,7 @@ class TestHStackMatrixRepeat(unittest.TestCase):
                                             matrValues3,  # Величины 3
                                             matrValues4,  # Величины 4
                                             matrValues5  # Величины 5
-                                            ), repeatValues,
-                                            Indexes)
+                                            ), repeatValues, Indexes)
 
         # Проверяем значения
         dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt[:, Indexes]))
@@ -290,8 +288,7 @@ class TestHStackMatrixRepeat(unittest.TestCase):
         matrValuesRez = HStackMatrixRepeat((matrValues1,  # Величины 1
                                             matrValues2,  # Величины 2
                                             matrValues3  # Величины 3
-                                            ), repeatValues,
-                                            Indexes)
+                                            ), repeatValues, Indexes)
 
         # Проверяем значения
         dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt[:, Indexes]))

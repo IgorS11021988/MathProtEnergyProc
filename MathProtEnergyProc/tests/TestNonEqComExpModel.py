@@ -6,17 +6,17 @@ from MathProtEnergyProc import NonEqSystem
 from MathProtEnergyProc import NonEqSystemDyn
 from MathProtEnergyProc import CountDynamics, VectorModel
 
-from MathProtEnergyProc.tests.UnitTestExamples.TestNonEq1 import *
-from MathProtEnergyProc.tests.UnitTestExamples.TestNonEq2 import *
-from MathProtEnergyProc.tests.UnitTestExamples.TestNonEq3 import *
+from MathProtEnergyProc.tests.UnitTestExamples.TestNonEq1 import CountSystem1, CountState1
+from MathProtEnergyProc.tests.UnitTestExamples.TestNonEq2 import CountSystem2, CountState2
+from MathProtEnergyProc.tests.UnitTestExamples.TestNonEq3 import CountSystem3, CountState3
 
-from MathProtEnergyProc.tests.UnitTestExamples.fU1 import *
-from MathProtEnergyProc.tests.UnitTestExamples.fU2 import *
-from MathProtEnergyProc.tests.UnitTestExamples.fU3 import *
+from MathProtEnergyProc.tests.UnitTestExamples.fU1 import fU1
+from MathProtEnergyProc.tests.UnitTestExamples.fU2 import fU2
+from MathProtEnergyProc.tests.UnitTestExamples.fU3 import fU3
 
-from MathProtEnergyProc.tests.UnitTestExamples.FunChar1 import *
-from MathProtEnergyProc.tests.UnitTestExamples.FunChar2 import *
-from MathProtEnergyProc.tests.UnitTestExamples.FunChar3 import *
+from MathProtEnergyProc.tests.UnitTestExamples.FunChar1 import FunChar1
+from MathProtEnergyProc.tests.UnitTestExamples.FunChar2 import FunChar2
+from MathProtEnergyProc.tests.UnitTestExamples.FunChar3 import FunChar3
 
 import unittest
 

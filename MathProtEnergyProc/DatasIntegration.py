@@ -34,7 +34,7 @@ def HStackMatrixRepeatTwo(values1,  # Величины 1
     rez = (np.repeat(aValues1, nRows2, axis=0),  # Матрица 1
            np.full((nRows1, aValues2.size), aValues2.reshape(1, -1)).reshape(-1, nColumns2)  # Матрица 2
            )
-    
+
     # Конкатенуем матрицы и выбираем индексы (при необходимости)
     isNeedConcatValuesIndexes = concatValuesIndexesList is not None
     if ConcatValues or isNeedConcatValuesIndexes:
@@ -48,7 +48,7 @@ def HStackMatrixRepeatTwo(values1,  # Величины 1
                 _inds = []
                 for indexes in concatValuesIndexesList:
                     _inds += indexes
-                
+
                 # Выбираем подматрицу в соответствие с индексами
                 rez = rez[:, _inds]
             else:

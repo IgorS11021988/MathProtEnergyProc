@@ -2,9 +2,9 @@ import numpy as np
 
 from MathProtEnergyProc import NonEqSystem
 
-from MathProtEnergyProc.tests.UnitTestExamples.TestNonEq1 import *
-from MathProtEnergyProc.tests.UnitTestExamples.TestNonEq2 import *
-from MathProtEnergyProc.tests.UnitTestExamples.TestNonEq3 import *
+from MathProtEnergyProc.tests.UnitTestExamples.TestNonEq1 import CountSystem1, CountState1
+from MathProtEnergyProc.tests.UnitTestExamples.TestNonEq2 import CountSystem2, CountState2
+from MathProtEnergyProc.tests.UnitTestExamples.TestNonEq3 import CountSystem3, CountState3
 
 import unittest
 

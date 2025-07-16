@@ -294,6 +294,26 @@ class TestHStackMatrixRepeat(unittest.TestCase):
         dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt[:, Indexes]))
         self.assertEqual(dMatrValuesRez, 0.0)
 
+        # Генерируем случайные данные
+        matrValuesRez = HStackMatrixRepeat((matrValues1,  # Величины 1
+                                            matrValues2,  # Величины 2
+                                            matrValues3  # Величины 3
+                                            ), True)
+
+        # Проверяем значения
+        dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt))
+        self.assertEqual(dMatrValuesRez, 0.0)
+
+        # Генерируем случайные данные
+        matrValuesRez = HStackMatrixRepeat((matrValues1,  # Величины 1
+                                            matrValues2,  # Величины 2
+                                            matrValues3  # Величины 3
+                                            ), repeatValues, Indexes)
+
+        # Проверяем значения
+        dMatrValuesRez = np.max(np.abs(matrValuesRez - matrValuesRezEt[:, Indexes]))
+        self.assertEqual(dMatrValuesRez, 0.0)
+
 
 # Запустить тестирование
 if __name__ == "__main__":

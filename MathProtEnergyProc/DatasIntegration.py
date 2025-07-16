@@ -68,7 +68,11 @@ def HStackMatrixRepeat(listValues,  # Список массивов данных
                        concatValuesIndexes=None  # Окончательные индексы конкатенованных величин
                        ):
     # Приводим к массивам numpy аргументы
-    aRepeatValues = np.array(repeatValues)  # Приводим необходимость повторения величин
+    aRepeatValues = np.array(repeatValues).reshape(-1,)  # Приводим необходимость повторения величин
+    nListValues = len(listValues)  # Число элементов списка
+    if (aRepeatValues.size == 1) and (nListValues > 2):
+        # Повторяем необходимость размножения
+        aRepeatValues = np.repeat(aRepeatValues, nListValues - 1)
 
     # Получаем индексы
     inds = range(aRepeatValues.size)

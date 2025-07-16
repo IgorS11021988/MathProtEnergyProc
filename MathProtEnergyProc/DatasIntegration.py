@@ -1,6 +1,15 @@
 import numpy as np
 
 
+# Заполнение массива матрицами
+def repeatMatrix(sourceMatrix,  # Размножаемая матрица
+                 nRepeatesSourceЬatrix  # Число повторений размножаемой матрицы
+                 ):
+    # Размножаем матрицу в столбец
+    return np.full([nRepeatesSourceЬatrix, sourceMatrix.size],
+                   sourceMatrix.reshape(1, -1)).reshape(-1, sourceMatrix.shape[1])
+
+
 # Приведение одномерного массива к матрице-столбцу
 def ToMatrixOneColumn(matr):
     if len(matr.shape) == 1:
@@ -32,7 +41,7 @@ def HStackMatrixRepeatTwo(values1,  # Величины 1
 
     # Размножаем матрицы
     rez = (np.repeat(aValues1, nRows2, axis=0),  # Матрица 1
-           np.full((nRows1, aValues2.size), aValues2.reshape(1, -1)).reshape(-1, nColumns2)  # Матрица 2
+           repeatMatrix(aValues2, nRows1)  # Матрица 2
            )
 
     # Конкатенуем матрицы и выбираем индексы (при необходимости)
@@ -64,7 +73,7 @@ def HStackMatrixRepeatTwo(values1,  # Величины 1
 
 # Конкатенация произвольного числа матриц с размножением
 def HStackMatrixRepeat(listValues,  # Список массивов данных величин
-                       repeatValues,  # Нужно ли повторять величины
+                       repeatValues=True,  # Нужно ли повторять величины
                        concatValuesIndexes=None  # Окончательные индексы конкатенованных величин
                        ):
     # Приводим к массивам numpy аргументы
